@@ -1,3 +1,4 @@
 langchain
 pypdf2
 openai
+tiktoken
