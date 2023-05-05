@@ -11,7 +11,7 @@ from langchain.llms import OpenAI
 
 import os
 
-openai_api_key =st.secrets['api_key']
+openai_api_key == st.secrets['api_key']
 
 def main():
     st.set_page_config(page_title="Chat with your PDF")
