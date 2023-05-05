@@ -47,7 +47,7 @@ def main():
     
     #create embeddings
     if len(chunks) > 0:
-        embeddings = OpenAIEmbeddings(allowed_special={'', ...})
+        embeddings = OpenAIEmbeddings(disallowed_special=())
         knowledge_base =FAISS.from_texts(chunks, embeddings)
         user_question=st.text_input("Ask your question about your PDF:")
         if user_question:
