@@ -1,2 +1,3 @@
 langchain
 pypdf2
+openai
