@@ -13,7 +13,7 @@ import os
 
 
 def main():
-    openai_api_key = st.secrets["openai"]["api_key"]
+    openai.api_key = st.secrets["api_key"]
     st.set_page_config(page_title="Chat with your PDF")
     st.header("Chat with your PDF")
     
