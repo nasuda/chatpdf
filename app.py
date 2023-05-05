@@ -11,9 +11,9 @@ from langchain.llms import OpenAI
 
 import os
 
-openai_api_key = st.secrets["openai"]["api_key"]
 
 def main():
+    openai_api_key = st.secrets["openai"]["api_key"]
     st.set_page_config(page_title="Chat with your PDF")
     st.header("Chat with your PDF")
     
