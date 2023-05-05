@@ -7,6 +7,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
 
 from langchain.llms import OpenAI
 
@@ -26,13 +28,21 @@ def main():
         pdf_reader = PdfReader(pdf)
         for page in pdf_reader.pages:
             text += page.extract_text()
-    #split text
-    text_splitter = CharacterTextSplitter(
-        separator ='\n',
-        chunk_size = 1000,
-        chunk_overlap = 200,
-        length_function =len
-    )
+  
+#split text　CharacterTextSplitterの場合
+#    text_splitter = CharacterTextSplitter(
+#        separator ='\n',
+#        chunk_size = 1000,
+#        chunk_overlap = 200,
+#        length_function =len
+#    )
+    
+   #RecursiveCharacterTextSplitterを利用した場合
+    text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size = 1000,   # チャンクの文字数
+    chunk_overlap  = 200,  # チャンクオーバーラップの文字数
+        
+)
     chunks = text_splitter.split_text(text)
     
     #create embeddings
