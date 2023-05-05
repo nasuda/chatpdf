@@ -2,3 +2,4 @@ langchain
 pypdf2
 openai
 tiktoken
+faiss-cpu
