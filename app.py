@@ -11,10 +11,10 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 
 import os
+os.environ["OPENAI_API_KEY"] = st.secrets["api_key"]
 
 
 def main():
-    openai.api_key = st.secrets["api_key"]
     st.set_page_config(page_title="Chat with your PDF")
     st.header("Chat with your PDF")
     
