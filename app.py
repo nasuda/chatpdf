@@ -12,7 +12,7 @@ from langchain.llms import OpenAI
 
 import os
 
-openai_api_key =st.secrets["api_key]
+openai_api_key =st.secrets['api_key']
 
 def main():
     load_dotenv()
