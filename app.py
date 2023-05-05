@@ -39,7 +39,7 @@ def main():
     
    #RecursiveCharacterTextSplitterを利用した場合
     text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 1000,   # チャンクの文字数
+    chunk_size = 800,   # チャンクの文字数
     chunk_overlap  = 200,  # チャンクオーバーラップの文字数
         
 )
