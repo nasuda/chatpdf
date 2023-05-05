@@ -10,10 +10,14 @@ from langchain.chains.question_answering import load_qa_chain
 
 from langchain.llms import OpenAI
 
+import os
+
+openai_api_key =st.secrets["api_key]
+
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Ask your PDF")
-    st.header("Ask your PDF")
+    st.set_page_config(page_title="Chat with your PDF")
+    st.header("Chat with your PDF")
     
     #upload pdf
     pdf = st.file_uploader("Upload your PDF", type=["pdf"])
